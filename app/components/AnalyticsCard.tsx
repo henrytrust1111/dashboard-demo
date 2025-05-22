@@ -6,7 +6,8 @@ import { PiCreditCardDuotone } from "react-icons/pi";
 // import { PiMoneyBold } from "react-icons/pi";
 import { LiaMoneyBillWaveSolid } from "react-icons/lia";
 import { PiHourglassMediumLight } from "react-icons/pi";
-import { FiArrowUpRight } from "react-icons/fi";
+// import { FiArrowUpRight } from "react-icons/fi";
+import { GoArrowUpRight } from "react-icons/go";
 
 const cardData = [
   {
@@ -68,7 +69,7 @@ export const AnalyticsCard = () => {
             ) : (
               <div className="flex items-center gap-1 text-sm text-[#0000008F]">
                <div className={`${card.changeColor} rounded-[4px] flex items-center gap-1 p-0.5 text-xs`}>
-                 <FiArrowUpRight />
+                 <GoArrowUpRight />
                 <span className={`font-medium `}>
                   {card.change}
                 </span>
