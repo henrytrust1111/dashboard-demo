@@ -1,17 +1,18 @@
 "use client";
 
 import React from "react";
-import { PiCreditCardLight } from "react-icons/pi";
-import { PiCreditCardDuotone } from "react-icons/pi";
+// import { PiCreditCardLight } from "react-icons/pi";
+// import { PiCreditCardDuotone } from "react-icons/pi";
 // import { PiMoneyBold } from "react-icons/pi";
-import { LiaMoneyBillWaveSolid } from "react-icons/lia";
-import { PiHourglassMediumLight } from "react-icons/pi";
+// import { LiaMoneyBillWaveSolid } from "react-icons/lia";
+// import { PiHourglassMediumLight } from "react-icons/pi";
 // import { FiArrowUpRight } from "react-icons/fi";
 import { GoArrowUpRight } from "react-icons/go";
+import Image from "next/image";
 
 const cardData = [
   {
-    icon: <PiCreditCardLight size={16} className="bg-[#EFFAF6] text-[#29A174]" />,
+    icon: "icons/analytics/credit-card-check.svg",
     title: "Total Active Cards",
     value: "26,478",
     change: "+9%",
@@ -19,7 +20,7 @@ const cardData = [
     changeColor: "bg-[#EFFAF6] text-[#29A174]"
   },
   {
-    icon: <PiCreditCardDuotone size={16} className="text-purple-600" />,
+    icon: "icons/analytics/credit-card-edit.svg",
     title: "Total Personalized Cards",
     value: "15,703",
     change: "8.5%",
@@ -27,7 +28,7 @@ const cardData = [
     changeColor: "bg-[#EFFAF6] text-[#29A174]"
   },
   {
-    icon: <LiaMoneyBillWaveSolid size={16} className="text-blue-600" />,
+    icon: "icons/analytics/bank-note.svg",
     title: "Today’s Revenue",
     value: "₦9.3M",
     change: "+6%",
@@ -35,7 +36,7 @@ const cardData = [
     changeColor: "bg-[#EFFAF6] text-[#29A174]"
   },
   {
-    icon: <PiHourglassMediumLight size={16} className="text-orange-500" />,
+    icon: "icons/analytics/hourglass.svg",
     title: "Pending Requests",
     value: "38",
     subtitle: "Requires attention",
@@ -52,7 +53,14 @@ export const AnalyticsCard = () => {
           className="bg-white border border-[#E2E2E2] rounded-xl p-2 flex flex-col gap-2"
         >
           <div className="text-sm font-medium text-[#0000008F]">
-            {card.icon}
+            {/* {card.icon} */}
+            <Image
+              src={card.icon}
+              alt={card.title}
+              width={20}
+              height={20}
+              className="object-contain w-5 h-5"
+            />
             {card.title}
           </div>
 
@@ -63,17 +71,24 @@ export const AnalyticsCard = () => {
 
             {card.attention ? (
               <div className="flex items-center gap-1 text-xs text-[#E78020] font-medium">
-                <span className="w-2 h-2 border border-[#E78020] bg-[#E78020] rounded-full"></span>
+                {/* <span className="w-2 h-2 border border-[#E78020] bg-[#E78020] rounded-full"></span> */}
+                <Image
+                  src="icons/analytics/alert-circle.svg"
+                  alt="alert-circle"
+                  // width={16}
+                  // height={16}
+                  className="object-contain w-2 h-2"
+                />
                 {card.subtitle}
               </div>
             ) : (
               <div className="flex items-center gap-1 text-sm text-[#0000008F]">
-               <div className={`${card.changeColor} rounded-[4px] flex items-center gap-1 p-0.5 text-xs`}>
-                 <GoArrowUpRight />
-                <span className={`font-medium `}>
-                  {card.change}
-                </span>
-               </div>
+                <div
+                  className={`${card.changeColor} rounded-[4px] flex items-center gap-1 p-0.5 text-xs`}
+                >
+                  <GoArrowUpRight />
+                  <span className={`font-medium `}>{card.change}</span>
+                </div>
                 <span>{card.subtitle}</span>
               </div>
             )}
