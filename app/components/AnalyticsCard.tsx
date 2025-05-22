@@ -75,8 +75,8 @@ export const AnalyticsCard = () => {
                 <Image
                   src="icons/analytics/alert-circle.svg"
                   alt="alert-circle"
-                  // width={16}
-                  // height={16}
+                  width={20}
+                  height={20}
                   className="object-contain w-2 h-2"
                 />
                 {card.subtitle}
