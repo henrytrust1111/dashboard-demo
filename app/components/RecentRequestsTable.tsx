@@ -36,7 +36,7 @@ const statusStyles: Record<Request["status"], string> = {
 
 export function RecentRequestsTable() {
   return (
-    <div className="bg-white border border-gray-100 rounded-2xl p-4 flex flex-col space-y-4">
+    <div className="w-full bg-white border border-gray-100 rounded-2xl p-4 flex flex-col space-y-4">
       {/* Header */}
       <div className="flex items-center justify-between">
         <h3 className="text-lg font-medium text-[#121212]">
@@ -49,7 +49,7 @@ export function RecentRequestsTable() {
       </div>
 
       {/* Table */}
-      <div className="overflow-x-auto no-scrollbar">
+      <div className="overflow-x-auto max-w-md w-full no-scrollbar">
         <table className="w-full text-left">
           <thead className="bg-[#F1F7FF]">
             <tr>

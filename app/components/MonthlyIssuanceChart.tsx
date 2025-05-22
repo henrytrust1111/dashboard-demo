@@ -32,7 +32,7 @@ const data: DataPoint[] = [
 
 export function MonthlyIssuanceChart() {
   return (
-    <div className="bg-white border border-gray-100 rounded-2xl p-4 flex flex-col h-[350px]">
+    <div className="bg-white w-full border border-gray-100 rounded-2xl p-4 flex flex-col h-[350px]">
       {/* Header */}
       <div className="flex items-center justify-between mb-2">
         <h3 className="text-lg font-medium text-[#121212]">
