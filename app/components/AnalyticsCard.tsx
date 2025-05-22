@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { GoArrowUpRight } from "react-icons/go";
 import Image from "next/image";
 
 const cardData = [
@@ -80,7 +79,13 @@ export const AnalyticsCard = () => {
                 <div
                   className={`${card.changeColor} rounded-[4px] flex items-center gap-1 p-0.5 text-xs`}
                 >
-                  <GoArrowUpRight />
+                  <Image
+                    src="icons/analytics/arrow-narrow-up-right.svg"
+                    alt="alert-circle"
+                    width={20}
+                    height={20}
+                    className="object-contain w-2 h-2"
+                  />
                   <span className={`font-medium `}>{card.change}</span>
                 </div>
                 <span>{card.subtitle}</span>
