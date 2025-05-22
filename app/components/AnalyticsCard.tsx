@@ -3,7 +3,8 @@
 import React from "react";
 import { PiCreditCardLight } from "react-icons/pi";
 import { PiCreditCardDuotone } from "react-icons/pi";
-import { PiMoneyBold } from "react-icons/pi";
+// import { PiMoneyBold } from "react-icons/pi";
+import { LiaMoneyBillWaveSolid } from "react-icons/lia";
 import { PiHourglassMediumLight } from "react-icons/pi";
 import { FiArrowUpRight } from "react-icons/fi";
 
@@ -25,7 +26,7 @@ const cardData = [
     changeColor: "bg-[#EFFAF6] text-[#29A174]"
   },
   {
-    icon: <PiMoneyBold size={16} className="text-blue-600" />,
+    icon: <LiaMoneyBillWaveSolid size={16} className="text-blue-600" />,
     title: "Today’s Revenue",
     value: "₦9.3M",
     change: "+6%",
