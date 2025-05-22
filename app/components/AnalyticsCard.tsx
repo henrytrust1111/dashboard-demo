@@ -1,12 +1,6 @@
 "use client";
 
 import React from "react";
-// import { PiCreditCardLight } from "react-icons/pi";
-// import { PiCreditCardDuotone } from "react-icons/pi";
-// import { PiMoneyBold } from "react-icons/pi";
-// import { LiaMoneyBillWaveSolid } from "react-icons/lia";
-// import { PiHourglassMediumLight } from "react-icons/pi";
-// import { FiArrowUpRight } from "react-icons/fi";
 import { GoArrowUpRight } from "react-icons/go";
 import Image from "next/image";
 
