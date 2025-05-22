@@ -36,7 +36,7 @@ const statusStyles: Record<Request["status"], string> = {
 
 export function RecentRequestsTable() {
   return (
-    <div className="bg-white border border-gray-100 rounded-2xl shadow-sm p-4 flex flex-col space-y-4">
+    <div className="bg-white border border-gray-100 rounded-2xl p-4 flex flex-col space-y-4">
       {/* Header */}
       <div className="flex items-center justify-between">
         <h3 className="text-lg font-medium text-[#121212]">

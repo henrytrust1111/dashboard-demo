@@ -3,7 +3,11 @@
 import { AnalyticsCard } from "./components/AnalyticsCard";
 import Container from "./components/Container";
 import dynamic from "next/dynamic";
-const HeaderDashboard = dynamic(() => import("./components/HeaderDashboard").then(mod => mod.HeaderDashboard), { ssr: false });
+const HeaderDashboard = dynamic(
+  () =>
+    import("./components/HeaderDashboard").then((mod) => mod.HeaderDashboard),
+  { ssr: false }
+);
 import { IncomeChart } from "./components/IncomeChart";
 import { MonthlyIssuanceChart } from "./components/MonthlyIssuanceChart";
 import { QuickAccess } from "./components/QuickAccess";

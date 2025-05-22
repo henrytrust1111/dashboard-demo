@@ -38,7 +38,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 md:pl-72 z-10 flex items-center justify-between bg-white h-16 px-4 shadow-sm ">
+    <header className="fixed top-0 left-0 right-0 md:pl-72 z-10 flex items-center justify-between bg-white h-16 px-4">
       {/* Left: Menu toggle + Greeting */}
       <div className="flex items-center space-x-4">
         <button

@@ -57,19 +57,19 @@ const dashboardItem: MenuItemProps = {
 };
 
 const menuItems: MenuItemProps[] = [
-  { href: "/admin/branches",    iconName: "branches",            label: "Branches" },
-  { href: "/admin/roles",       iconName: "role",                label: "Roles" },
-  { href: "/admin/users",       iconName: "users",               label: "Users" },
-  { href: "/admin/card-schemes",iconName: "card-scheme",         label: "Card Scheme" },
-  { href: "/admin/card-profiles",iconName: "card-profile",       label: "Card Profile" },
-  { href: "/admin/card-requests",iconName: "card-request",       label: "Card Request" },
-  { href: "/admin/stock",        iconName: "stock",               label: "Stock" },
-  { href: "/admin/cards",        iconName: "cards",               label: "Cards" },
-  { href: "/admin/block-unblock",iconName: "unblocked-card",      label: "Block/Unblock Card" },
-  { href: "/admin/auth-list",    iconName: "authorization-list",  label: "Authorization List" },
-  { href: "/admin/auth-queue",   iconName: "authorization-queue", label: "Authorization Queue" },
-  { href: "/admin/trail",        iconName: "trail",               label: "Trail" },
-  { href: "/admin/account",      iconName: "account",             label: "Account" },
+  { href: "/branches",    iconName: "branches",            label: "Branches" },
+  { href: "/roles",       iconName: "role",                label: "Roles" },
+  { href: "/users",       iconName: "users",               label: "Users" },
+  { href: "/card-schemes",iconName: "card-scheme",         label: "Card Scheme" },
+  { href: "/card-profiles",iconName: "card-profile",       label: "Card Profile" },
+  { href: "/card-requests",iconName: "card-request",       label: "Card Request" },
+  { href: "/stock",        iconName: "stock",               label: "Stock" },
+  { href: "/cards",        iconName: "cards",               label: "Cards" },
+  { href: "/block-unblock",iconName: "unblocked-card",      label: "Block/Unblock Card" },
+  { href: "/auth-list",    iconName: "authorization-list",  label: "Authorization List" },
+  { href: "/auth-queue",   iconName: "authorization-queue", label: "Authorization Queue" },
+  { href: "/trail",        iconName: "trail",               label: "Trail" },
+  { href: "/account",      iconName: "account",             label: "Account" },
 ];
 
 // Memoized Sidebar component
