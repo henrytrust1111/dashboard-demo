@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { useMyContext } from "@/context";
+import { FiX } from "react-icons/fi";
 
 // Helper to choose colored or white variant
 const getIconSrc = (name: string, colored: boolean) =>
@@ -18,58 +19,72 @@ interface MenuItemProps {
 }
 
 // Memoized MenuItem with hover state
-const MenuItem: React.FC<MenuItemProps> = React.memo(({ href, iconName, label }) => {
-  const pathname = usePathname();
-  const isActive = pathname === href;
-  // Hover state to switch icon variant
-  const [isHovered, setIsHovered] = useState(false);
+const MenuItem: React.FC<MenuItemProps> = React.memo(
+  ({ href, iconName, label }) => {
+    const pathname = usePathname();
+    const isActive = pathname === href;
+    // Hover state to switch icon variant
+    const [isHovered, setIsHovered] = useState(false);
 
-  const showColored = isActive || isHovered;
-  const activeClasses = isActive
-    ? "bg-[#E6F0FF] text-[#014DAF] font-semibold rounded-[8px]"
-    : "text-[#D0D5DD] hover:bg-[#E4F0FF] hover:text-[#014DAF] rounded-[8px]";
+    const showColored = isActive || isHovered;
+    const activeClasses = isActive
+      ? "bg-[#E6F0FF] text-[#014DAF] font-semibold rounded-[8px]"
+      : "text-[#D0D5DD] hover:bg-[#E4F0FF] hover:text-[#014DAF] rounded-[8px]";
 
-  return (
-    <Link
-      href={href}
-      className={`flex items-center gap-3 px-4 py-3 transition ${activeClasses}`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <Image
-        src={getIconSrc(iconName, showColored)}
-        alt={`${label} icon`}
-        width={20}
-        height={20}
-        className="shrink-0"
-      />
-      <span className="text-xs leading-none">{label}</span>
-    </Link>
-  );
-});
+    return (
+      <Link
+        href={href}
+        className={`flex items-center gap-3 px-4 py-3 transition ${activeClasses}`}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <Image
+          src={getIconSrc(iconName, showColored)}
+          alt={`${label} icon`}
+          width={20}
+          height={20}
+          className="shrink-0"
+        />
+        <span className="text-xs leading-none">{label}</span>
+      </Link>
+    );
+  }
+);
 MenuItem.displayName = "MenuItem";
 
 // Static menu definitions
 const dashboardItem: MenuItemProps = {
   href: "/",
   iconName: "dashboard",
-  label: "Dashboard",
+  label: "Dashboard"
 };
 
 const menuItems: MenuItemProps[] = [
-  { href: "/branches",    iconName: "branches",            label: "Branches" },
-  { href: "/roles",       iconName: "role",                label: "Roles" },
-  { href: "/users",       iconName: "users",               label: "Users" },
-  { href: "/card-schemes",iconName: "card-scheme",         label: "Card Scheme" },
-  { href: "/card-profiles",iconName: "card-profile",       label: "Card Profile" },
-  { href: "/card-requests",iconName: "card-request",       label: "Card Request" },
-  { href: "/stock",        iconName: "stock",               label: "Stock" },
-  { href: "/cards",        iconName: "cards",               label: "Cards" },
-  { href: "/block-unblock",iconName: "unblocked-card",      label: "Block/Unblock Card" },
-  { href: "/auth-list",    iconName: "authorization-list",  label: "Authorization List" },
-  { href: "/auth-queue",   iconName: "authorization-queue", label: "Authorization Queue" },
-  { href: "/trail",        iconName: "trail",               label: "Trail" },
-  { href: "/account",      iconName: "account",             label: "Account" },
+  { href: "/branches", iconName: "branches", label: "Branches" },
+  { href: "/roles", iconName: "role", label: "Roles" },
+  { href: "/users", iconName: "users", label: "Users" },
+  { href: "/card-schemes", iconName: "card-scheme", label: "Card Scheme" },
+  { href: "/card-profiles", iconName: "card-profile", label: "Card Profile" },
+  { href: "/card-requests", iconName: "card-request", label: "Card Request" },
+  { href: "/stock", iconName: "stock", label: "Stock" },
+  { href: "/cards", iconName: "cards", label: "Cards" },
+  {
+    href: "/block-unblock",
+    iconName: "unblocked-card",
+    label: "Block/Unblock Card"
+  },
+  {
+    href: "/auth-list",
+    iconName: "authorization-list",
+    label: "Authorization List"
+  },
+  {
+    href: "/auth-queue",
+    iconName: "authorization-queue",
+    label: "Authorization Queue"
+  },
+  { href: "/trail", iconName: "trail", label: "Trail" },
+  { href: "/account", iconName: "account", label: "Account" }
 ];
 
 // Memoized Sidebar component
@@ -100,14 +115,15 @@ const Sidebar: React.FC = React.memo(() => {
       >
         {/* Mobile Close Button */}
         <div className="flex justify-end p-4 md:hidden">
-          <button onClick={closeMobile}>
+          {/* <button onClick={closeMobile}>
             <Image
               src={getIconSrc("logout", false)}
               alt="Close sidebar"
               width={24}
               height={24}
             />
-          </button>
+          </button> */}
+          <FiX className="text-white" size={24} onClick={closeMobile} />
         </div>
 
         {/* Logo */}
@@ -135,7 +151,7 @@ const Sidebar: React.FC = React.memo(() => {
 
         {/* Main Menu Items */}
         <nav className="mt-2 space-y-1">
-          {menuItems.map(item => (
+          {menuItems.map((item) => (
             <MenuItem key={item.href} {...item} />
           ))}
         </nav>
@@ -154,7 +170,9 @@ const Sidebar: React.FC = React.memo(() => {
               width={20}
               height={20}
             />
-            <span className="text-xs text-white hover:text-red-500">Logout</span>
+            <span className="text-xs text-white hover:text-red-500">
+              Logout
+            </span>
           </button>
 
           <div className="mt-6 text-center">
