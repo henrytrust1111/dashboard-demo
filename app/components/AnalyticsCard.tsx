@@ -64,7 +64,6 @@ export const AnalyticsCard = () => {
 
             {card.attention ? (
               <div className="flex items-center gap-1 text-xs text-[#E78020] font-medium">
-                {/* <span className="w-2 h-2 border border-[#E78020] bg-[#E78020] rounded-full"></span> */}
                 <Image
                   src="icons/analytics/alert-circle.svg"
                   alt="alert-circle"

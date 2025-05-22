@@ -13,7 +13,6 @@ import { MonthlyIssuanceChart } from "./components/MonthlyIssuanceChart";
 import { QuickAccess } from "./components/QuickAccess";
 import { RecentRequestsTable } from "./components/RecentRequestsTable";
 import { StatusDistributionChart } from "./components/StatusDistributionChart";
-// const Header = dynamic(() => import("./components/Header"), { ssr: false });
 
 export default function DashboardPage() {
   return (

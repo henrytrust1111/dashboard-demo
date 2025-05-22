@@ -105,33 +105,3 @@ export function MonthlyIssuanceChart() {
     </div>
   );
 }
-
-// 'use client';
-// import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
-
-// const data = [
-//   { month: 'May', Instant: 20, Personalized: 40 },
-//   { month: 'Jun', Instant: 25, Personalized: 60 },
-//   { month: 'Jul', Instant: 10, Personalized: 30 },
-//   { month: 'Aug', Instant: 20, Personalized: 45 },
-//   { month: 'Sep', Instant: 25, Personalized: 50 },
-//   { month: 'Oct', Instant: 30, Personalized: 55 },
-//   { month: 'Nov', Instant: 30, Personalized: 50 },
-// ];
-
-// export function MonthlyIssuanceChart() {
-//   return (
-//     <div className="bg-white p-4 rounded shadow h-[300px]">
-//       <h3 className="text-sm font-semibold mb-2">Monthly Issuance</h3>
-//       <ResponsiveContainer width="100%" height="100%">
-//         <BarChart data={data}>
-//           <XAxis dataKey="month" />
-//           <YAxis />
-//           <Tooltip />
-//           <Bar dataKey="Personalized" stackId="a" fill="#8884d8" />
-//           <Bar dataKey="Instant" stackId="a" fill="#413ea0" />
-//         </BarChart>
-//       </ResponsiveContainer>
-//     </div>
-//   );
-// }
